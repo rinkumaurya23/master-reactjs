@@ -12,9 +12,24 @@ const LearnUseEffect=()=> {
     setRandomNumber(newRandomNumber);
   }
   // Example - it runs times when component is mounted and re-render 
+//   useEffect(()=>{
+// console.log("UseEffect called");
+//   })
+
+// It runs once when the component is mounted([] mean no dependencies)
+  // useEffect(()=>{
+  //   console.log("Useeffect called")
+  // },[])
+  //  it runs ewhen the component is mounted and whenever dependence changes.
+  // useEffect(()=>{
+  //    console.log("Useeffect called")
+  //    },[count])
   useEffect(()=>{
-console.log("UseEffect called");
-  })
+    console.log("Useeffect called")
+    return ()=>{
+      console.log("Components will unmount !!")
+    }
+    },[count])
   return (
     <div>
       <h1>LearnUseEffect</h1>
