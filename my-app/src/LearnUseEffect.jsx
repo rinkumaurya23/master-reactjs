@@ -11,6 +11,7 @@ const LearnUseEffect=()=> {
     const newRandomNumber =Math.floor(Math.random()*100)+1;
     setRandomNumber(newRandomNumber);
   }
+  // Example - it runs times when component is mounted and re-render 
   useEffect(()=>{
 console.log("UseEffect called");
   })
